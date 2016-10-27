@@ -31,6 +31,8 @@ object Main {
       result = new StandardRoulette().spin()
     } else if (rouletteString.equalsIgnoreCase(oneHundred)) {
       result = new OneHundredPocketRoulette().spin()
+    } else {
+      throw new IllegalStateException("Invalid Roulette Type Accepted: " + rouletteString)
     }
 
     val spinResult = "Result: " + result
